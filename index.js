@@ -51,7 +51,7 @@ function longPlaneteerCalls(words) {
 //If a list of ingredients does not include cheese, return "no cheese"
 
 function findTheCheese(snacks){
-  var cheddar = snacks.indexOf("cheddar");
+/*  var cheddar = snacks.indexOf("cheddar");
   var gouda = snacks.indexOf("gouda");
   var camembert = snacks.indexOf("camembert");
   var snack_pack = [cheddar,gouda,camembert];
@@ -62,5 +62,25 @@ function findTheCheese(snacks){
   }
   else {
     return snacks[found_snack];
+  } */
+  var allCheeses=["swiss","cheddar","gouda"];
+  for (let i=0; i<snacks.length; i++){
+    if (allCheeses.indexOf(snacks[i])>=0){
+    return snacks[i];
+    }
   }
+  return "no cheese!";
+}
+
+//startsWithB
+//accept words array
+//return only words that start with B from that original array
+function startsWithB(words){
+  arrayOfB=[];
+  for (i=0; i<words.length; i++){
+    if (words[i][0]=== "b"){
+      arrayOfB.push(`${words[i]}`)
+    }
+  }
+  return arrayOfB;
 }
